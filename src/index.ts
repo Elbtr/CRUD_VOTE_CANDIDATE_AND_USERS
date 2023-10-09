@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Response } from "express";
 import { AppDataSource } from "./data-source";
 import cors from "cors";
 import { cloudinaryConfig } from "./config/configCloudinary";
@@ -11,6 +11,7 @@ import UsersRouter from "./routes/UserRouter";
 // middleware
 import cookieParser from "cookie-parser";
 import authUser from "./middleware/auth-users";
+import { Request } from "express-serve-static-core";
 
 AppDataSource.initialize()
   .then(async () => {
@@ -38,6 +39,9 @@ AppDataSource.initialize()
     // cloudinary config
     app.use("*", cloudinaryConfig);
 
+    app.use("/", (req: Request, res: Response): Response => {
+      return res.status(200).json("welocome to my api");
+    });
     app.use("/api/v1", UsersRouter);
     app.use(authUser);
     app.use("/api/v1", PaslonRouter);
