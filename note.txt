@@ -1,0 +1,16 @@
+ini adalah isi file .env saya yang harus anda isi data nya
+
+1. API_ORIGIN = http://localhost:8001
+   - saya menggunakan nya di index.ts dimana dengan menggunakan ini
+    api saya hanya bisa di akses oleh frond end yang memiliki titik akses yang sama
+    seperti yang saya buat.
+
+
+2. ini adalah configurasi cloudinary penyimpan foto dll kamu bisa mengisi data nya sama configurasi cloudinary anda
+CLOUD_NAME=
+CLOUD_API_KEY =
+CLOUD_API_SECRET =
+
+
+3. yang terakhir adalah jwt toke key data ini berupa string yang bebas mau anda isi apa.
+JWT_TOKEN_KEY = 
