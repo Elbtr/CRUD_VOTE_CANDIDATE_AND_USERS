@@ -16,6 +16,7 @@
     "@types/cookie-parser": "^1.4.4",
     "@types/express-serve-static-core": "^4.17.37",
     "@types/jsonwebtoken": "^9.0.3",
+    "@vercel/node": "^3.0.7",
     "bcrypt-ts": "^4.0.0",
     "cloudinary": "^1.41.0",
     "cookie-parser": "^1.4.6",
