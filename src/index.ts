@@ -39,9 +39,9 @@ AppDataSource.initialize()
     // cloudinary config
     app.use("*", cloudinaryConfig);
 
-    app.use("/", (req: Request, res: Response): Response => {
-      return res.status(200).json("welocome to my api");
-    });
+    // app.use("/", (req: Request, res: Response): Response => {
+    //   return res.status(200).json("welocome to my api");
+    // });
     app.use("/api/v1", UsersRouter);
     app.use(authUser);
     app.use("/api/v1", PaslonRouter);

@@ -20,7 +20,10 @@ export class Paslon {
   @Column({ nullable: true })
   image: string;
 
-  @OneToMany(() => Parties, (party) => party.paslon)
+  @OneToMany(() => Parties, (party) => party.paslon, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+  })
   @JoinColumn()
   party: Parties[];
 

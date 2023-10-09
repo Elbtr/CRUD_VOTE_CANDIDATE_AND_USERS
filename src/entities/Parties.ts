@@ -15,7 +15,10 @@ export default class Parties {
   id: number;
   @Column()
   party_name: string;
-  @ManyToOne(() => Paslon, (p) => p.party)
+  @ManyToOne(() => Paslon, (p) => p.party, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+  })
   @JoinColumn()
   paslon: Paslon;
   @Column({

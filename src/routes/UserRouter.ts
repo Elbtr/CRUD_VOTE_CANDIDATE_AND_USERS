@@ -7,7 +7,7 @@ import authUser from "../middleware/auth-users";
 const router = Router();
 
 router.get("/users", authUser, UsersControllers.find);
-router.post("/user", UsersControllers.create);
+router.post("/register", UsersControllers.create);
 router.post("/login", UserLoginControllers.login);
 router.post("/logout", UserLogOutControllers.logOut);
 
